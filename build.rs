@@ -7,7 +7,7 @@ fn main() {
 }
 
 fn compile_protos() {
-    let proto_dir = Path::new("protos");
+    let proto_dir = Path::new("protos/xiaomi");
     let protos = collect_proto_files(proto_dir);
 
     for proto in &protos {
@@ -15,7 +15,7 @@ fn compile_protos() {
         println!("Proto file {} added to codegen list.", proto.display());
     }
 
-    let out_dir = "src/pb";
+    let out_dir = "src/xiaomi";
     let out_path = Path::new(out_dir);
     if !out_path.exists() {
         println!("Output dir `{}` does not exist, creating…", out_dir);
